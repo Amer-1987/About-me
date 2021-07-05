@@ -1,0 +1,40 @@
+.header{
+font-size: 4em;
+text-align: center ;
+}
+
+p{
+    text-align: center;
+}
+
+.first{
+    font-size: 2em; 
+    background-color: rgb(10, 24, 99);
+    color: cadetblue;
+}
+
+.second{
+    font-size: 1.5em; 
+    background-color: rgb(59, 59, 5);
+    color: rgb(224, 245, 35);
+}
+
+.third{
+    font-size: 1.5em; 
+    background-color: rgb(59, 59, 5);
+    color: rgb(224, 245, 35);
+}
+
+.fourth{
+    font-size: 1.5em; 
+    background-color: rgb(63, 6, 14);
+    color: rgb(241, 56, 56);
+}
+img {
+    border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    height: auto;
+}

@@ -104,11 +104,11 @@ let Movies = ['vikings', 'blacklist', 'spartacus', 'mentalist', 'prison break', 
 console.log(Movies.length);
 
 
-let favMovies = prompt('what are my favourite movies?');
+let favMovies = prompt('');
 
 for (let i = 0; i < 6; i++) {
 
-
+    favMovies = prompt('what are my favourite movies?');
     for (let j = 0; j < 6; j++) {
         console.log('second loop', j);
 

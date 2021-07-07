@@ -45,22 +45,81 @@ myCharecture = myCharecture.toLowerCase();
 
 if (myCharecture === "yes" || myCharecture === "y") {
     console.log(myCharecture + ", that explain why I am in this course at this stage of my life");
-        alert('That explain why I am in this course at this stage of my life, and I wish success and develop myself more and more');
+    alert('That explain why I am in this course at this stage of my life, and I wish success and develop myself more and more');
 }
 else if (myCharecture === "no" || myCharecture === "n") {
-    console.log( "This contradicts with my being here")
+    console.log("This contradicts with my being here")
     alert('This contradicts with my being here, I am in this course at this stage of my life, and I wish success and develop myself more and more');
 }
 
 
-let mark=prompt("Do I deserve a full mark?");
+let mark = prompt("Do I deserve a full mark?");
 mark = mark.toLowerCase();
 
 if (mark === "yes" || mark === "y") {
-    console.log(mark +", I agree with you and I deserve that");
-        alert('I agree with you, I deserve that');
+    console.log(mark + ", I agree with you and I deserve that");
+    alert('I agree with you, I deserve that');
 }
-        else if (mark === "no" || mark === "n") {
-            console.log( "could you reconsidered again,please?")
-            alert('could you reconsidered again,please?');
+else if (mark === "no" || mark === "n") {
+    console.log("could you reconsidered again,please?");
+    alert('could you reconsidered again,please?');
+}
+
+
+let myNo = 6;
+let i;
+let Guess;
+for (i = 0; i < 4; i++) {
+
+    Guess = prompt("guess a number between 1 to 12, you have 4 attempts");
+
+    if (Guess < myNo) {
+        console.log("Your guess is " + Guess + ", You are too low, try again");
+        alert("You are too low , try again");
+
+
+    } else if (Guess > myNo) {
+        console.log("Your guess is " + Guess + ", You are too high, try again");
+        alert("You are too high , try again");
+
+
+    }
+
+    else {
+        alert('correct guess, that is great');
+        console.log("Your guess is " + Guess + ", correct, that is great");
+
+        break;
+    }
+
+}
+
+if (Guess < myNo || Guess > myNo) {
+    console.log('Unfortunately, you have exceeded the number of times allowed, the true number is 6 ');
+    alert('Unfortunately, you have exceeded the number of times allowed, the true number is 6 ');
+}
+
+
+let Movies = ['vikings', 'blacklist', 'spartacus', 'mentalist', 'prison break', 'breaking bad'];
+console.log(Movies.length);
+
+
+let favMovies = prompt('what are my favourite movies?');
+
+for (let i = 0; i < 6; i++) {
+
+
+    for (let j = 0; j < 6; j++) {
+        console.log('second loop', j);
+
+        if (favMovies === Movies[j]) {
+            console.log(Movies[j]);
+            alert("correct");
+            break;
         }
+        else {
+             alert("wrong");
+             favMovies = prompt('what are my favourite movies?');
+        }
+    }
+}

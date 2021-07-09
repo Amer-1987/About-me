@@ -1,25 +1,104 @@
-.header{
-font-size: 4em;
-text-align: center ;
+
+/*sidebar*/
+
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(65, 21, 21);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .header{
+    font-size: 4em;
+    text-align: center ;
+    }
+
+  .amer {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+body{
+    background-color: rgb(181, 240, 194);
+
+}
+.font-effect-fire{
+    text-align: center;
+    font-size: 3em; 
 }
 
-p{
+/* .header {
     text-align: center;
+    font-size: 3em; 
+
+} */
+
+p{
+    font-family: "Sofia", sans-serif;
+
+    text-align: center;
+    font-size: 0.75em; 
+
+}
+
+ul{
+    font-family: "Sofia", sans-serif;
+
+}
+
+ul li{
+    text-align: center;
+    font-size: 0.75em; 
+    display: flex;
+    justify-content: center;
+}
+
+ol li {
+    font-family: Copperplate, Papyrus, fantasy;
+
+    text-align: center;
+    font-size: 0.75em; 
+    display: flex;
+    justify-content: center;
 }
 
 .first{
-    font-size: 2em; 
-    background-color: rgb(10, 24, 99);
-    color: cadetblue;
+
+    font-size: 0.9em; 
+    background-color: rgb(91, 155, 89);
+    color: rgb(172, 231, 104);
 }
 
 .second{
-    font-size: 1.5em; 
+
     background-color: rgb(59, 59, 5);
     color: rgb(224, 245, 35);
 }
 
-.third{
+/* .third{
     font-size: 1.5em; 
     background-color: rgb(59, 59, 5);
     color: rgb(224, 245, 35);
@@ -28,9 +107,9 @@ p{
 .fourth{
     
     font-size: 1.5em; 
-    background-color: rgb(63, 6, 14);
-    color: rgb(241, 56, 56);
-}
+    background-color: rgb(59, 59, 5);
+    color: rgb(224, 245, 35); */
+/* } */
 img {
     border-radius: 50%;
     display: block;
@@ -39,3 +118,72 @@ img {
     max-width: 50%;
     height: auto;
 }
+
+movies{
+position: relative;
+left: 10mm;
+
+}
+
+hoppies{
+    position: fixed;
+    left: 100mm; 
+}
+
+/* OUTER CONTAINER */
+.tcontainer {
+    width: 100%;
+    overflow: hidden; /* Hide scroll bar */
+  }
+   
+  /* MIDDLE CONTAINER */
+  .ticker-wrap {
+    width: 100%;
+    padding-right: 10%; /* Push contents to right side of screen */
+    background-color: rgb(169, 233, 233);
+  }
+  
+  /* INNER CONTAINER */
+  @keyframes ticker {
+   
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  .ticker-move {
+    /* Basically move items from right side of screen to left in infinite loop */
+    animation-direction: normal;
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker;
+    animation-duration: 30s;
+
+  }
+  .ticker-move:hover{
+    animation-play-state: paused; /* Pause scroll on mouse hover */
+  }
+  
+  /* ITEMS */
+  .ticker-item{
+    font-size: large;
+    display: inline-block; /* Lay items in a horizontal line */
+    padding: 0 2rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+
+    background-color: rgb(226, 248, 184);
+    flex: 50%;
+    padding: 5px;
+  }
